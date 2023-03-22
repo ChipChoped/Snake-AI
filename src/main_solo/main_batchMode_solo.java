@@ -27,7 +27,7 @@ public class main_batchMode_solo {
 
 		boolean randomFirstApple = true;	
 		
-		String layoutName = "layouts/alone/smallNoWall_alone.lay";
+		String layoutName = "layouts/alone/verySmallNoWall_alone.lay";
 		
 		InputMap inputMap = null;
 		
@@ -64,10 +64,10 @@ public class main_batchMode_solo {
 			System.out.println("Compute score in test mode");
 			launchParallelGames(Ntest, maxTurnSnakeGame, inputMap, arrayStrategies, false, randomFirstApple);
 			
-			if(cpt%10 == 0) {
+			/*if(cpt%10 == 0) {
 				System.out.println("Visualization mode");
 				vizualize(maxTurnSnakeGame, inputMap, arrayStrategies, false, randomFirstApple);
-			}
+			}*/
 			
 			System.out.println("Play and collect examples - train mode");
 			launchParallelGames(Ntrain, maxTurnSnakeGame, inputMap, arrayStrategies, true, randomFirstApple);
