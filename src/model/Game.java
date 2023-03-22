@@ -12,7 +12,7 @@ public abstract class Game extends Observable implements Runnable, Serializable{
 	
 	transient Thread thread;
 	
-	long time = 100;
+	long time = 1000;
 	
 	public Game(int maxTurn) {
 		
