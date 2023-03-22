@@ -23,4 +23,8 @@
 hs_err_pid*
 
 # Intellij IDEA
-/.idea
+.idea/
+bin/
+
+*.iml
+*.eml
