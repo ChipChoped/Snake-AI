@@ -40,7 +40,7 @@ public class main_batchMode_solo {
 		
 		Strategy[] arrayStrategies = new Strategy[inputMap.getStart_snakes().size()];
 		
-	    arrayStrategies[0] = new TabularQLearning_solo(AgentAction.values().length, epsilon, gamma, alpha);
+	    arrayStrategies[0] = new ApproximateQLearning_solo(AgentAction.values().length, epsilon, gamma, alpha);
 		
 
 		
@@ -64,10 +64,10 @@ public class main_batchMode_solo {
 			System.out.println("Compute score in test mode");
 			launchParallelGames(Ntest, maxTurnSnakeGame, inputMap, arrayStrategies, false, randomFirstApple);
 			
-			/*if(cpt%10 == 0) {
+			if(cpt%10 == 0) {
 				System.out.println("Visualization mode");
 				vizualize(maxTurnSnakeGame, inputMap, arrayStrategies, false, randomFirstApple);
-			}*/
+			}
 			
 			System.out.println("Play and collect examples - train mode");
 			launchParallelGames(Ntrain, maxTurnSnakeGame, inputMap, arrayStrategies, true, randomFirstApple);

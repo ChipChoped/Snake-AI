@@ -8,11 +8,13 @@
 
 > Mode train a des résultats plus faibles à cause de l'aléatoire qui est plus fort qu'en mode test.
 
+verySmallNoWall
 Compute score in test mode
 Test - agent 0 - strategy strategy.TabularQLearning_solo@70177ecd average global score : 2.51
 Play and collect examples - train mode
 Train - agent 0 - strategy strategy.TabularQLearning_solo@70177ecd average global score : 4.22
 
+smallNoWall
 Compute score in test mode
 Test - agent 0 - strategy strategy.TabularQLearning_solo@70177ecd average global score : 6.98
 Play and collect examples - train mode
@@ -25,4 +27,35 @@ Train - agent 0 - strategy strategy.TabularQLearning_solo@70177ecd average globa
 
 ### 2.1
 
-> La distance entre la tête du snake et la pomme
+> La distance Manhattan entre la tête du snake et la pomme
+
+### 2.3
+
+### 2.4
+
+verySmallNoWall
+Train - agent 0 - strategy strategy.ApproximateQLearning_solo@1e80bfe8 average global score : 5.26
+Compute score in test mode
+Test - agent 0 - strategy strategy.ApproximateQLearning_solo@1e80bfe8 average global score : 5.6
+Play and collect examples - train mode
+
+smallNoWall
+Play and collect examples - train mode
+Train - agent 0 - strategy strategy.ApproximateQLearning_solo@1e80bfe8 average global score : 7.44
+Compute score in test mode
+Test - agent 0 - strategy strategy.ApproximateQLearning_solo@1e80bfe8 average global score : 10.68
+
+verySmall
+Train - agent 0 - strategy strategy.ApproximateQLearning_solo@1e80bfe8 average global score : 1.84
+Compute score in test mode
+Test - agent 0 - strategy strategy.ApproximateQLearning_solo@1e80bfe8 average global score : 3.12
+Play and collect examples - train mode
+
+small
+Train - agent 0 - strategy strategy.ApproximateQLearning_solo@1e80bfe8 average global score : 2.01
+Compute score in test mode
+Test - agent 0 - strategy strategy.ApproximateQLearning_solo@1e80bfe8 average global score : 4.56
+Play and collect examples - train mode
+
+> La distance Manhattan entre la tête du snake et son corps
+> Un booléen représentant la présence d'un mur

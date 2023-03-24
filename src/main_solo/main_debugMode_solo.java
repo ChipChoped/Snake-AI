@@ -21,7 +21,7 @@ public class main_debugMode_solo {
 		boolean randomFirstApple = true;
 		
 		
-		String layoutName = "layouts/alone/verySmallNoWall_alone.lay";
+		String layoutName = "layouts/alone/smallNoWall_alone.lay";
 		
 		InputMap inputMap = null;
 		

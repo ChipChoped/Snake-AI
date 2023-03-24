@@ -111,12 +111,28 @@ public class TabularQLearning_solo extends Strategy {
 		Position head = snake.getPositions().get(0);
 		Item apple = snakeGame.getItems().get(0);
 
-		state.append("V".repeat(Math.max(0, snakeGame.getSizeX() * snakeGame.getSizeY())));
-		state.setCharAt(snakeGame.getSizeX() * head.getY() + head.getX(), 'H');
-		state.setCharAt(snakeGame.getSizeX() * apple.getY() + apple.getX(), 'A');
+		int width = snakeGame.getSizeX();
+		int height = snakeGame.getSizeY();
+
+		state.append("V".repeat(Math.max(0, width * height)));
+
+		if (snakeGame.getWalls()[0][0]) {
+			for (int i = 0; i < width; i++) {
+				state.setCharAt(i, 'W');
+				state.setCharAt(width * (height - 1) + i, 'W');
+			}
+
+			for (int i = 1; i < height - 1; i++) {
+				state.setCharAt(width * i, 'W');
+				state.setCharAt(width * i + width - 1, 'W');
+			}
+		}
+
+		state.setCharAt(width * head.getY() + head.getX(), 'H');
+		state.setCharAt(width * apple.getY() + apple.getX(), 'A');
 
 		for (int i = 1; i < snake.getPositions().size(); i++)
-			state.setCharAt(snakeGame.getSizeX() * snake.getPositions().get(i).getY() + snake.getPositions().get(i).getX(), 'B');
+			state.setCharAt(width * snake.getPositions().get(i).getY() + snake.getPositions().get(i).getX(), 'B');
 
 		return state.toString();
 	}
