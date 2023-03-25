@@ -98,12 +98,12 @@ public class ViewCommand implements Observer {
 
 		JSlider j = new JSlider(1,10);
 
-		j.setValue(2);
+		j.setValue(10);
 		j.setMajorTickSpacing(1);
 		j.setPaintTicks(true);
 		j.setPaintLabels(true);
 
-		this.controller.setSpeed(2);
+		this.controller.setSpeed(10);
 
 		j.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent evenement) {
